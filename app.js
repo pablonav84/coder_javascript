@@ -2,7 +2,7 @@ alert("Bienvenido/a al Servicio de comidas")
 let respuesta = prompt("¿Desea realizar una compra? Presione s (si) o n (no)")
 while (respuesta != "n") {
   if (respuesta == "s") {
-    let entrada = prompt(`Ingrese una opción para continuar o 0 para salir:
+    let entrada = prompt(`Ingrese una opción para continuar:
     1: Hamburguesa
     2: Pizza
     3: Lomito
