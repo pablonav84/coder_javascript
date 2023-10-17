@@ -1,0 +1,136 @@
+
+/*Nav-bar*/
+.nav-container {
+    position: sticky;
+    z-index: 3;
+    top: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 95px;
+    background-color: black;
+}
+
+.navbar-logo {
+    justify-self: start;
+    margin-left: 20px;
+    color: white;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.ver-carrito{
+    font-size: 40px;
+    opacity: 0.7;
+    cursor: pointer;
+    margin: 20px 50px 0 0;
+}
+.ver-carrito:hover{
+    opacity: 1;
+}
+
+/*Product cards*/
+.food-content {
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+    justify-items: center;
+    margin-top: 80px;
+    row-gap: 80px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 black;
+    height: 200px;
+    width: 300px;
+    font-size: 20px;
+    text-align: center;
+    font-family: Arial;
+}
+.card button {
+    border: none;
+    padding: 12px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 25px;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+
+/*carrito content*/
+.carrito-container{
+    width: 80%;
+    margin: 0 10%;
+    max-height: 500px;
+    color: white;
+    background-color:black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /*for the top*/
+    position: fixed;
+    overflow:auto;
+    z-index: 9;
+    top:100px;
+}
+
+.carrito-container::-webkit-scrollbar{
+    display: none;
+}
+
+.carrito-Header{
+display: flex;
+justify-content: space-around;
+background-color: black;
+color: white;
+width: 100%;
+}
+
+.carrito-header-title{
+    justify-self: start;
+}
+
+.carrito-header-button{
+    cursor: pointer;
+    font-size: 35px;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.carrito-container > .carrito-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.carrito-container > div > img{
+    height: 120px;
+    width: 120px;
+}
+
+.total-content {
+    font-size: 30px;
+    text-align: center;
+    padding: 20px 20px;
+}
+
+/*Boton eliminar*/
+.delete-product{
+    cursor:pointer;
+    opacity: 0.7;
+}
+
+.delete-product:hover{
+    opacity: 1;
+}
