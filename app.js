@@ -10,12 +10,12 @@ const carritoContainer = document.getElementById("carritoContainer");
 
 /*Creo un array con los productos o los objetos que estan disponibles a la venta*/
 const productos = [
-  { id: 1, nombre: "hamburguesa", precio: 2000, cantidad: 1 },
-  { id: 2, nombre: "lomito", precio: 2500, cantidad: 1 },
-  { id: 3, nombre: "pizza", precio: 1500, cantidad: 1 },
-  { id: 4, nombre: "papas", precio: 500, cantidad: 1 },
-  { id: 5, nombre: "pancho", precio: 800, cantidad: 1 },
-  { id: 6, nombre: "gaseosa", precio: 1000, cantidad: 1 },
+  { id: 1, nombre: "Hamburguesa", precio: 2000, cantidad: 1 },
+  { id: 2, nombre: "Lomito", precio: 2500, cantidad: 1 },
+  { id: 3, nombre: "Pizza", precio: 1500, cantidad: 1 },
+  { id: 4, nombre: "Papas", precio: 500, cantidad: 1 },
+  { id: 5, nombre: "Pancho", precio: 800, cantidad: 1 },
+  { id: 6, nombre: "Gaseosa", precio: 1000, cantidad: 1 },
 ];
 
 

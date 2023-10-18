@@ -13,7 +13,7 @@ const llenarCarrito = () =>{
     const carritoHeader = document.createElement("div"); /*Creo un elemento div*/
     carritoHeader.className = "carrito-Header";
     carritoHeader.innerHTML = `
-      <h1 class="carrito-header-title">Carrito</h1>
+      <h1 class="carrito-header-title">Su Pedido</h1>
       `; /*Le inserto contenido HTML (título) */
   
       /*Creo un contenedor padre en el index llamado carritoContainer y en él inserto el div creado acá */
