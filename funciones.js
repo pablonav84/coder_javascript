@@ -47,21 +47,20 @@ const llenarCarrito = () =>{
   <p>$${product.precio}</p>
   <p>Cantidad: ${product.cantidad}</p>
   <p>Total: ${product.cantidad * product.precio}<p>
+  <span class="delete-product"> ❌ </span>
     `;
   
-    /*Creo botón para eliminar productos agregados al carrito*/
-    let eliminar = document.createElement("span");
-  
-    eliminar.innerText = "❌";
-    eliminar.className = "delete-product";
-  
-    /*Inserto el botón eliminar al contenido de mi carrito */
-    carritoContent.append(eliminar);
+    /*Inserto el contenido del menú carrito al div padre creado en el index por medio de la función append */
+    carritoContainer.append(carritoContent);
+    
+  let eliminar = carritoContent.querySelector(".delete-product");
+
+
 
 /*Creo la función para darle funcionalidad al botón "eliminar" */
-const eliminarProducto = () => {
+const eliminarProducto = (id) => {
   /*Creo la constante foundId y con el método "find" busco el id del producto que el usuario está queriendo eliminar*/
-  const foundId = carrito.find((element) => element.id);
+  const foundId = carrito.find((element) => element.id == id);
 
   /*Con el método "filter" sobreescribo el valor de carrito con todos los resultados
   excepto el id que encontré anteriormente con "find", lo hago comparando la constante
@@ -73,13 +72,13 @@ const eliminarProducto = () => {
 
   llenarCarrito(); /*Por último utilizo la función creada anteriormente llenarCarrito para mostrar el resultado */
 };
-
+    
 /*Asocio la función "eliminarProducto" por medio de addEventListener
 al botón eliminar para indicar cuando ejecutar el proceso */  
-eliminar.addEventListener("click", eliminarProducto);
-  
-/*Inserto el contenido del menú carrito al div padre creado en el index por medio de la función append */
-carritoContainer.append(carritoContent);
+eliminar.addEventListener("click", ()=> {
+  eliminarProducto(product.id);
+});
+
   });
 
   
@@ -107,3 +106,4 @@ carritoContainer.append(carritoContent);
 que a través de un click en el h1 creado anteriormente llamado verCarrito
 ejecute la función llenarCarrito */
 verCarrito.addEventListener("click", llenarCarrito);
+
