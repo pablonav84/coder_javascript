@@ -10,12 +10,12 @@ const carritoContainer = document.getElementById("carritoContainer");
 
 /*Creo un array con los productos o los objetos que estan disponibles a la venta*/
 const productos = [
-  { id: 1, nombre: "Hamburguesa", precio: 2000, cantidad: 1 },
-  { id: 2, nombre: "Lomito", precio: 2500, cantidad: 1 },
-  { id: 3, nombre: "Pizza", precio: 1500, cantidad: 1 },
-  { id: 4, nombre: "Papas", precio: 500, cantidad: 1 },
-  { id: 5, nombre: "Pancho", precio: 800, cantidad: 1 },
-  { id: 6, nombre: "Gaseosa", precio: 1000, cantidad: 1 },
+  { id: 1, nombre: "Hamburguesa", precio: 2000, img: src="./imagenes/burguer.jpg", cantidad: 1 },
+  { id: 2, nombre: "Lomito", precio: 2500, img: src="./imagenes/lomito.jpg", cantidad: 1 },
+  { id: 3, nombre: "Pizza", precio: 1500, img: src="./imagenes/pizza.jpg", cantidad: 1 },
+  { id: 4, nombre: "Papas", precio: 500, img: src="./imagenes/papas.png", cantidad: 1 },
+  { id: 5, nombre: "Pancho", precio: 800, img: src="./imagenes/pancho.jpg", cantidad: 1 },
+  { id: 6, nombre: "Gaseosa", precio: 1000, img: src="./imagenes/gaseosa.jpg", cantidad: 1 },
 ];
 
 
@@ -28,6 +28,7 @@ productos.forEach((product) => {
   let content = document.createElement("div"); /*Creo la variable content y dentro el elemento div en mi "document" por medio de la función createElement*/
   content.className = "card"; /*Le asigno una clase con la propiedad className para agregar luego estilo css*/
   content.innerHTML = `
+  <img src="${product.img}">
 <h3>${product.nombre}</h3>
 <p class="price">$${product.precio}</p>
 `; /*Inserto contenito HTML con la propiedad innerHTML al elemento div creado anteriormente*/
@@ -64,6 +65,7 @@ productos.forEach((product) => {
     } else {
   /*si repeat es igual a false va a pushear los elementos del array al carrito por medio del método push*/
     carrito.push({
+      img: product.img,
       id: product.id,
       nombre: product.nombre,
       precio: product.precio,

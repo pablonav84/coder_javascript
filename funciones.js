@@ -43,6 +43,7 @@ const llenarCarrito = () =>{
     let carritoContent = document.createElement("div");
     carritoContent.className = "carrito-content";
     carritoContent.innerHTML = `
+    <img src="${product.img}">
     <h3>${product.nombre}</h3>
   <p>$${product.precio}</p>
   <p>Cantidad: ${product.cantidad}</p>
