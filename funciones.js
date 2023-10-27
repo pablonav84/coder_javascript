@@ -72,6 +72,7 @@ const eliminarProducto = (id) => {
   });
 
   llenarCarrito(); /*Por último utilizo la función creada anteriormente llenarCarrito para mostrar el resultado */
+  local();
 };
     
 /*Asocio la función "eliminarProducto" por medio de addEventListener

@@ -19,8 +19,21 @@ const productos = [
 ];
 
 
-/*Creo un array vacío que se irá llenando a medida que vaya cargando mi carrito */
-let carrito = [];
+/*-----Creo un array vacío que se irá llenando a medida que vaya cargando mi carrito-----*/
+
+/*Parse me sirve para obtener el contenido almacenado anteriormente por medio de "setItem" y uso JSON.parse para parsear el contenido,
+es decir transformar de string a objeto del array nuevamente*/
+
+/*Además introduzco la línea de "getItem" en mi array vacío con el comando "or" para indicarle a la variable que tome el valor del localstorage,
+y si no hay nada almacenado tome el contenido vacío tal cual era antes de agregar contenido en el almacenamiento del navegador*/
+let carrito = JSON.parse(localStorage.getItem("productos")) || [];
+
+/*Creo una funcion y uso localStorage para almacenar informacion en forma local en mi navegador y uso JSON.stringify para que lo almacene como string.
+Esta función creada me va a servir para luego invocarla en otra parte de mi proyecto*/
+const local = () => {
+  localStorage.setItem("productos", JSON.stringify(carrito));
+}
+
 
 
 /*Por medio del método forEach recorro mi array que contiene los productos para luego mostrarlos*/
@@ -73,5 +86,8 @@ productos.forEach((product) => {
     });
   }
     console.log(carrito);
+    
+    /*Invoco la funcón local para que almacene la información en el navegador como lo indiqué mas arriba*/
+    local();
   });
 });
