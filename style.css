@@ -31,6 +31,34 @@
     opacity: 1;
 }
 
+/*Estilo Welcome*/
+.welcome{
+    background-size: cover;
+    background-position: center;
+    height: 900px;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url("./imagenes/502_509024313.jpg");
+}
+
+.content-welcome{
+    text-align: center;
+    padding: 10% 0;
+}
+
+.welcome h1{
+    margin: 0;
+    color: rgb(238, 255, 0);
+    background-color: black;
+    font-size: 80px;
+    opacity: 0.7;
+}
+
+.welcome p{
+    font-size: 30px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0);
+}
+
 /*Product cards*/
 .food-content {
     display: grid;
@@ -124,7 +152,7 @@ width: 100%;
     font-size: 20px;
 }
 .carrito-content > img {
-    width: 150px;
+    width: 180px;
     height: 130px;
 }
 .total-content {
