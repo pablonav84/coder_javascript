@@ -72,7 +72,8 @@ const eliminarProducto = (id) => {
   });
 
   llenarCarrito(); /*Por último utilizo la función creada anteriormente llenarCarrito para mostrar el resultado */
-  local();
+  local(); /*Invoco esta función para que al momento de eliminar algún producto lo tenga en cuenta al momento de refrescar la página,
+  de lo contrario si elimino y actualizo la página ese elemento eliminado vuelve a aparecer*/
 };
     
 /*Asocio la función "eliminarProducto" por medio de addEventListener

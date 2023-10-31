@@ -1,3 +1,12 @@
+@font-face {
+    font-family: "SedgwickAveDisplay-Regular";
+    src: url("./fuente/Sedgwick_Ave_Display/SedgwickAveDisplay-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: "Calligraffitti-Regular";
+    src: url("./fuente/Calligraffitti/Calligraffitti-Regular.ttf");
+  }
 
 /*Nav-bar*/
 .nav-container {
@@ -13,11 +22,9 @@
     background-color: rgb(148, 5, 5);
 }
 
-.navbar-logo {
+.nav_logo {
     justify-self: start;
-    margin-left: 40px;
-    color: rgb(238, 255, 0);
-    margin-top: 30px;
+    margin: 5px 0px 5px 100px;
     cursor: pointer;
 }
 
@@ -38,6 +45,7 @@
     height: 900px;
     background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
     url("./imagenes/502_509024313.jpg");
+    
 }
 
 .content-welcome{
@@ -48,15 +56,18 @@
 .welcome h1{
     margin: 0;
     color: rgb(238, 255, 0);
-    background-color: black;
-    font-size: 80px;
+    background-color: rgb(184, 0, 0);
+    font-size: 120px;
     opacity: 0.7;
+    font-family: "SedgwickAveDisplay-Regular", sans-serif;
 }
 
 .welcome p{
-    font-size: 30px;
+    font-size: 60px;
     color: white;
     text-shadow: 1px 1px 3px rgba(0,0,0,0);
+    font-family: "Calligraffitti-Regular", sans-serif;
+    text-shadow:  0 0 0.2em rgb(238, 255, 0), 0 0 0.2em rgb(238, 255, 0);
 }
 
 /*Product cards*/
