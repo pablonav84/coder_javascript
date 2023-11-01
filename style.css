@@ -1,9 +1,4 @@
-@font-face {
-    font-family: "SedgwickAveDisplay-Regular";
-    src: url("./fuente/Sedgwick_Ave_Display/SedgwickAveDisplay-Regular.ttf");
-  }
-
-  @font-face {
+ @font-face {
     font-family: "Calligraffitti-Regular";
     src: url("./fuente/Calligraffitti/Calligraffitti-Regular.ttf");
   }
@@ -38,7 +33,7 @@
     opacity: 1;
 }
 
-/*Estilo Welcome*/
+/*Estilo imagen bienvenida*/
 .welcome{
     background-size: cover;
     background-position: center;
@@ -50,27 +45,24 @@
 
 .content-welcome{
     text-align: center;
-    padding: 10% 0;
+    padding-top: 100px;
 }
 
-.welcome h1{
-    margin: 0;
-    color: rgb(238, 255, 0);
-    background-color: rgb(184, 0, 0);
-    font-size: 120px;
-    opacity: 0.7;
-    font-family: "SedgwickAveDisplay-Regular", sans-serif;
+.welcome_img {
+    width: 500px;
+    height: 500px;
+    opacity: 0.6;
+
 }
 
-.welcome p{
+.welcome p {
     font-size: 60px;
     color: white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0);
     font-family: "Calligraffitti-Regular", sans-serif;
     text-shadow:  0 0 0.2em rgb(238, 255, 0), 0 0 0.2em rgb(238, 255, 0);
 }
 
-/*Product cards*/
+/*cards de los productos*/
 .food-content {
     display: grid;
     grid-template-columns: 4fr 4fr 4fr;
@@ -112,7 +104,7 @@
     opacity: 0.7;
 }
 
-/*carrito content*/
+/*contenedor carrito*/
 .carrito-container{
     width: 80%;
     margin: 0 10%;
@@ -123,7 +115,7 @@
     flex-direction: column;
     align-items: center;
 
-    /*for the top*/
+    /*fijar arriba*/
     position: fixed;
     overflow:auto;
     z-index: 9;
