@@ -12,14 +12,17 @@
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     height: 95px;
     background-color: rgb(148, 5, 5);
 }
 
 .nav_logo {
+    width: 80px;
+    height: 80px;
     justify-self: start;
-    margin: 5px 0px 5px 100px;
+    margin-top: 7px;
+    margin-right: 1400px;
     cursor: pointer;
 }
 
@@ -27,11 +30,82 @@
     font-size: 40px;
     opacity: 0.7;
     cursor: pointer;
-    margin: 20px 100px 0 0;
+    margin: 20px 120px 0 0;
 }
 .ver-carrito:hover{
     opacity: 1;
 }
+
+
+/*Inicio de Sesion*/
+.inicio_sesion{
+    font-size: 40px;
+    opacity: 0.7;
+    cursor: pointer;
+    margin: 20px 100px 0px 0px;
+}
+.inicio_sesion:hover{
+    opacity: 1;
+}
+
+.input{
+    width: 50%;
+    margin-left: 450px;
+    max-height: 800px;
+    color: white;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /*fijar arriba*/
+    position: fixed;
+    overflow:auto;
+    z-index: 9;
+    top:100px;
+}
+
+.input::-webkit-scrollbar{
+    display: none;
+}
+
+.input-Header{
+display: flex;
+justify-content: space-around;
+background-color: rgb(88, 82, 82);
+color: white;
+width: 100%;
+}
+
+.input-header-title{
+    justify-self: start;
+}
+
+.input-header-button{
+    cursor: pointer;
+    font-size: 35px;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.input > .input-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 800px;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.label2{
+    margin-top: 10px;
+}
+
+.boton{
+    margin-top: 15px;
+}
+
 
 /*Estilo imagen bienvenida*/
 .welcome{
@@ -61,6 +135,7 @@
     font-family: "Calligraffitti-Regular", sans-serif;
     text-shadow:  0 0 0.2em rgb(238, 255, 0), 0 0 0.2em rgb(238, 255, 0);
 }
+
 
 /*cards de los productos*/
 .food-content {
@@ -103,6 +178,7 @@
 .card button:hover {
     opacity: 0.7;
 }
+
 
 /*contenedor carrito*/
 .carrito-container{
@@ -163,6 +239,7 @@ width: 100%;
     text-align: center;
     padding: 20px 20px;
 }
+
 
 /*Boton eliminar*/
 .delete-product{
