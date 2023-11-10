@@ -21,8 +21,9 @@
     width: 80px;
     height: 80px;
     justify-self: start;
-    margin-top: 7px;
-    margin-right: 1400px;
+    margin-top: 0px;
+    margin-right: 1300px;
+    margin-left: 90px;
     cursor: pointer;
 }
 
@@ -30,7 +31,7 @@
     font-size: 40px;
     opacity: 0.7;
     cursor: pointer;
-    margin: 20px 120px 0 0;
+    margin: 5px 130px 0 0;
 }
 .ver-carrito:hover{
     opacity: 1;
@@ -42,7 +43,7 @@
     font-size: 40px;
     opacity: 0.7;
     cursor: pointer;
-    margin: 20px 100px 0px 0px;
+    margin-top: 10px;
 }
 .inicio_sesion:hover{
     opacity: 1;
@@ -108,34 +109,11 @@ width: 100%;
 
 
 /*Estilo imagen bienvenida*/
-.welcome{
+
+.tamaño{
     background-size: cover;
-    background-position: center;
-    height: 900px;
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-    url("./imagenes/502_509024313.jpg");
-    
+height: 900px;
 }
-
-.content-welcome{
-    text-align: center;
-    padding-top: 100px;
-}
-
-.welcome_img {
-    width: 500px;
-    height: 500px;
-    opacity: 0.6;
-
-}
-
-.welcome p {
-    font-size: 60px;
-    color: white;
-    font-family: "Calligraffitti-Regular", sans-serif;
-    text-shadow:  0 0 0.2em rgb(238, 255, 0), 0 0 0.2em rgb(238, 255, 0);
-}
-
 
 /*cards de los productos*/
 .food-content {
