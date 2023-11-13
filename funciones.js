@@ -29,7 +29,13 @@ productos.forEach((product) => {
 
   /*Por medio de la función addEventListener le doy funcionalidad a mi botón y en este caso al hacer click va a disparar algún evento*/
   comprar.addEventListener("click", () => {
-    alert("Su producto fue agregado al carrito"); /*Por medio de este alert informo que mi producto se encuentra agregado en el carrito */
+    Swal.fire({
+      position: "top",
+      icon: "success",
+      title: "Su pedido fué agregado al carrito",
+      showConfirmButton: false,
+      timer: 1500
+    }); /*Por medio de este alert informo que mi producto se encuentra agregado en el carrito */
 
     /*Creo una constante llamada repeat y por medio del método some recorro mi array llamado carrito
     para verificar si hay un producto repetido comparando repeatProduct.id con product.id para que luego
@@ -144,7 +150,26 @@ const eliminarProducto = (id) => {
 /*Asocio la función "eliminarProducto" por medio de addEventListener
 al botón eliminar para indicar cuando ejecutar el proceso */  
 eliminar.addEventListener("click", ()=> {
-  eliminarProducto(product.id);
+  Swal.fire({
+    title: "¿Desea Eliminar?",
+    text: "Su Producto Se Eliminará Del Carrito",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#d33",
+    cancelButtonColor: "#3085d6",
+    confirmButtonText: "Si, Eliminar!",
+    cancelButtonText: "Cancelar"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      eliminarProducto(product.id);
+      Swal.fire({
+        title: "Eliminado",
+        text: "Su Producto Fué Eliminado Del Carrito.",
+        icon: "success",
+      });
+    }
+  });
+ 
 });
 
   });

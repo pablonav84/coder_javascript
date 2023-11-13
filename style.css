@@ -104,6 +104,8 @@ width: 100%;
 }
 
 .boton{
+    color: white;
+    background-color: rgb(3, 117, 18);
     margin-top: 15px;
 }
 
