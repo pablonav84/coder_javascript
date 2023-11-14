@@ -23,6 +23,7 @@ const local = () => {
 
 /*Creo una función asyncrona para invocar a mis productos que se encuentran en el archivo JSON*/
 const getProducts = async () => {
+  try { //Uso try para ejecutar esta función para que en caso de no cargar los productos me dé un mensaje de error
   const response = await fetch("data.json"); /*Creo una constante con la que voy a almacenar una respuesta y capturo el contenido por medio de fetch*/
   const data = await response.json(); /*Acá almaceno los datos pasados a json*/
 
@@ -87,6 +88,15 @@ data.forEach((product) => {
     local();
   });
 });
+  } catch (error) {
+    const msjError = document.createElement("div");
+    msjError.innerHTML = `
+    <h1>Error al cargar los productos</h1>
+    `;
+    foodcontent.append(msjError)
+    console.error("Error al cargar los productos") //en caso de no responder la función asyncrona me da error en consola y por DOM
+  }
+  
 };
 
 /*Invoco la función getProducts para traer la información desde "data.json" */
